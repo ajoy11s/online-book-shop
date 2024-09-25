@@ -1,8 +1,11 @@
-# React + Vite
+Project Name: Online Book Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Details: Development a beautiful websit for online book sell which search different type of books.Any questions about type of books and also give your reviews.
 
-Currently, two official plugins are available:
+Techonology covered by:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+HTML,CSS Framework: Tailwind CSS
+Component Library for Tailwind CSS: DaisyUI
+React JS,React Router DOM etc.
+
+Live Link: https://online-book-shop-ajoy.netlify.app/

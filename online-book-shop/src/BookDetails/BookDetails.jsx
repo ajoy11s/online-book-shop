@@ -37,7 +37,7 @@ const BookDetails = () => {
 
 
     return (
-        <div className="flex justify-between items-start gap-4 bg-rose-100 p-10 rounded-md">
+        <div className="flex justify-between items-start gap-4 bg-rose-100 p-10 rounded-md flex-col lg:flex-row">
             <div><Toaster /></div>
             <div className="flex flex-col justify-center items-center gap-2">
 

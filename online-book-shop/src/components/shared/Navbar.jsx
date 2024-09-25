@@ -41,7 +41,7 @@ const Navbar = () => {
                     <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/faq"}><li>FAQ</li></NavLink>
                 </ul>
             </div>
-            <div className="navbar-end gap-3">
+            <div className="navbar-end gap-3 flex-col lg:flex-row">
                 <a className="btn bg-green-600 text-xl text-white">Buy Books</a>
                 <a className="btn bg-green-600 text-xl text-white">Sign In</a>
             </div>

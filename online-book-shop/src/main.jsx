@@ -1,28 +1,44 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from './App.jsx'
 import './index.css'
-import Homepage from './pages/Homepage.jsx'
-import NotFound from "./NotFound.jsx";
-import BoookDetails from "./components/shared/BookDetails.jsx";
+import Books from "./Books/Books.jsx";
+import FAQ from "./FAQ/FAQ.jsx";
+import BookDetails from "./BookDetails/BookDetails.jsx";
+import Home from "./Home/Home.jsx";
+import ErrorPage from "./ErrorPage/ErrorPage.jsx"
+import About from "./About/About.jsx"
+import Blog from "./Blog/Blog.jsx"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Homepage></Homepage>,
-    children:[
+    element: <Home></Home>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
       {
-        path: "/book/:bookId",
-        element: <BoookDetails></BoookDetails>,
+        path: "/",
+        element: <Books></Books>,
       },
       {
-        path: "*",
-        element: <NotFound></NotFound>,
+        path: "/faq",
+        element: <FAQ></FAQ>,
       },
-    ],
+      {
+        path: "/books/:bookId",
+        element: <BookDetails></BookDetails>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
+      
+    ]
   },
-  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

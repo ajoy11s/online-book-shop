@@ -1,18 +1,52 @@
-function Navbar() {
+import { NavLink } from "react-router-dom";
+
+
+const Navbar = () => {
     return (
-            <section className="bg-gray-200">
-                <div className="container mx-auto">
-                    <header className="flex items-center justify-between">
-                        <img src="src/assets/logo/book_shop_icon.png" alt="logo" className="h-16 w-16" />
-                        <nav className="space-x-4 mr-8">
-                            <span className="hover:bg-slate-400 cursor-pointer">Home</span>
-                            <span className="hover:bg-slate-400 cursor-pointer">About</span>
-                            <span className="hover:bg-slate-400 cursor-pointer">Blog</span>
-                            <span className="hover:bg-slate-400 cursor-pointer">FAQ</span>
-                        </nav>
-                    </header>
+        <div className="navbar bg-base-300 mt-2 rounded-lg">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul
+                        tabIndex={0}
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/"}>  <li>Home</li></NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/about"}>  <li>About</li></NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/blog"}><li>Blog</li></NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/faq"}><li>FAQ</li></NavLink>
+                    </ul>
                 </div>
-            </section>     
+
+                <NavLink className="font-extrabold text-cyan-700" to={'/'}>Online Book Shop</NavLink>
+
+            </div>
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1 flex gap-3 text-lg">
+                    <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/"}> <li>Home</li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/about"}>  <li>About</li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/blog"}><li>Blog</li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/faq"}><li>FAQ</li></NavLink>
+                </ul>
+            </div>
+            <div className="navbar-end gap-3">
+                <a className="btn btn-success bg-teal-400 text-white">Buy Books</a>
+                <a className="btn btn-success bg-teal-400 text-white">Sign In</a>
+            </div>
+        </div>
     );
-}
+};
+
 export default Navbar;

@@ -41,12 +41,12 @@ const BookDetails = () => {
             <div><Toaster /></div>
             <div className="flex flex-col justify-center items-center gap-2">
 
-                <img className="rounded-xl" src={image} alt={`image of book named ${bookName}`}></img>
+                <img className="rounded-xl w-96 h-60" src={image} alt={`image of book named ${bookName}`}></img>
 
                 <div>
                     <div>
-                        <span className="text-3xl font-bold text-gray-700">{bookName}</span> by
-                        <span className="text-2xl font-semibold italic text-gray-500"> {author}</span>
+                        <span className="text-2xl font-bold text-gray-700">{bookName}</span> by
+                        <span className="text-xl font-semibold italic text-gray-500"> {author}</span>
                     </div>
 
                     <div className="flex items-center gap-2 mt-3">
@@ -122,8 +122,8 @@ const BookDetails = () => {
 
 
                 <div className="flex gap-2">
-                    <button onClick={handleClickWish} className="btn  text-white  bg-green-300">Wish to Read</button>
-                    <button onClick={handleClickCart} className="btn text-white  bg-green-300">Add to Cart</button>
+                    <button onClick={handleClickWish} className="btn  text-white  bg-green-500">Wish to Read</button>
+                    <button onClick={handleClickCart} className="btn text-white  bg-green-500">Add to Cart</button>
                 </div>
 
             </div>

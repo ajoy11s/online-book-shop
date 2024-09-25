@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className="card footer footer-center bg-base-200 text-base-content rounded p-10 my-5">
+        <footer className="w-full bg-base-300 border border-gray-200 footer footer-center text-base-content rounded p-10 my-5">
             <nav className="grid grid-flow-col gap-4 font-bold">
                 <a className="link link-hover" >About us</a>
                 <a className="link link-hover" >Contact</a>

@@ -9,11 +9,11 @@ const BookCard = ({ book }) => {
 
     return (
         
-        <div className="card bg-base-100 w-96 shadow-xl">
+        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <figure>
                 <img
                     src={image}
-                    alt={`image of book named ${bookName}`} />
+                    alt={`image of book named ${bookName}`} className="w-96 h-52" />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">

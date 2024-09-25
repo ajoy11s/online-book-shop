@@ -29,8 +29,8 @@ const Navbar = () => {
                         <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/faq"}><li>FAQ</li></NavLink>
                     </ul>
                 </div>
-
-                <NavLink className="font-extrabold text-cyan-700" to={'/'}><h3 className="font-bold text-5xl text-green-500">Online Book Shop</h3></NavLink>
+                <img className="rounded-lg" src="/book_logo.png" alt="Logo" height="50px" width="50px" />
+                <NavLink className="font-extrabold text-red-500 from-neutral-content" to={'/'}><h3 className="font-bold text-3xl text-green-500">Online Book Shop</h3></NavLink>
 
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -42,8 +42,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <a className="btn bg-green-400 text-xl text-white">Buy Books</a>
-                <a className="btn bg-green-400 text-xl text-white">Sign In</a>
+                <a className="btn bg-green-600 text-xl text-white">Buy Books</a>
+                <a className="btn bg-green-600 text-xl text-white">Sign In</a>
             </div>
         </div>
     );

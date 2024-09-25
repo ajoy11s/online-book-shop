@@ -34,7 +34,7 @@ const BookCard = ({ book }) => {
                     }
 
                     <Link to={`/books/${bookId}`}>
-                        <button className="btn text-white bg-rose-300">Book Details</button>
+                        <button className="btn btn-success text-whit">Book Details</button>
                     </Link>
 
                 </div>

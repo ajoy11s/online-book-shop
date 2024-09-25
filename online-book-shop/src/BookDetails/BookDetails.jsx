@@ -15,7 +15,7 @@ const BookDetails = () => {
 
     useEffect(() => {
 
-        fetch('/books.json')
+        fetch('/data.json')
             .then((response) => response.json())
             .then((books) => {
                 // Find the book that matches the bookId
@@ -122,8 +122,8 @@ const BookDetails = () => {
 
 
                 <div className="flex gap-2">
-                    <button onClick={handleClickWish} className="btn  text-white  bg-rose-300">Wish to Read</button>
-                    <button onClick={handleClickCart} className="btn text-white  bg-rose-300">Add to Cart</button>
+                    <button onClick={handleClickWish} className="btn  text-white  bg-green-300">Wish to Read</button>
+                    <button onClick={handleClickCart} className="btn text-white  bg-green-300">Add to Cart</button>
                 </div>
 
             </div>
